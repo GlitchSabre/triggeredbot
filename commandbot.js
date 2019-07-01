@@ -20,7 +20,7 @@ else{let args = msg.content.substring(prefix.length).split(" ");
         break;
 
         case 'kick':
-                if(msg.member.roles.find("name","👑Owner") || msg.member.roles.find("name","🛠Moderator")){
+                if(msg.member.roles.has(567689357410959361) || msg.member.roles.has(567737708366004234)){
                     let args = msg.content.substring(prefix.length).split(" ");
                     if(!args[1]) return msg.channel.send('```Specify a person kid```')
                     let kUser = msg.guild.member(msg.mentions.users.first() || msg.guild.members.get(args[1]));
@@ -45,7 +45,7 @@ else{let args = msg.content.substring(prefix.length).split(" ");
                 else{msg.channel.send('```You aint got perms kid```')}
         break;
         case 'ban':
-                if(msg.member.roles.find("name","👑Owner") || msg.member.roles.find("name","🛠Moderator")){
+                if(msg.member.roles.has(567689357410959361) || msg.member.roles.has(567737708366004234)){
                     let args = msg.content.substring(prefix.length).split(" ");
                     if(!args[1]) return msg.channel.send('```Specify a person kid```')
                     let bUser = msg.guild.member(msg.mentions.users.first() || msg.guild.members.get(args[1]));
@@ -73,7 +73,7 @@ else{let args = msg.content.substring(prefix.length).split(" ");
             unban(msg)
         break;
         case 'purge':
-            if(msg.member.roles.find("name","👑Owner") || msg.member.roles.find("name","🛠Moderator")){
+            if(msg.member.roles.has(567689357410959361) || msg.member.roles.has(567737708366004234)){
                 let args = msg.content.substring(prefix.length).split(" ");
                 if(!args[1]) return msg.channel.send('```Specify No.of messages to be purged kid```')
                 if(args[1]>250 || args[1]<0) return msg.channel.send('```Select amount between 0 and 250```')
@@ -84,7 +84,7 @@ else{let args = msg.content.substring(prefix.length).split(" ");
             else{msg.channel.send('```You aint got perms kid```')}
         break;
         case 'mute':
-                if(msg.member.roles.find("name","👑Owner") || msg.member.roles.find("name","🛠Moderator")){
+                if(msg.member.roles.has(567689357410959361) || msg.member.roles.has(567737708366004234)){
                     let args = msg.content.substring(prefix.length).split(" ");
                     if(!args[1]) return msg.channel.send('```Specify the person to be muted kid```')
                     let mUser = msg.guild.member(msg.mentions.users.first() || msg.guild.members.get(args[1]));
@@ -99,7 +99,7 @@ else{let args = msg.content.substring(prefix.length).split(" ");
                 else{msg.channel.send('```You aint got perms kid```')}
         break;
         case 'unmute':
-                if(msg.member.roles.find("name","👑Owner") || msg.member.roles.find("name","🛠Moderator")){
+                if(msg.member.roles.has(567689357410959361) || msg.member.roles.has(567737708366004234)){
                     let args = msg.content.substring(prefix.length).split(" ");
                     if(!args[1]) return msg.channel.send('```Specify the person to be unmuted kid```')
                     let mUser = msg.guild.member(msg.mentions.users.first() || msg.guild.members.get(args[0]));
@@ -156,7 +156,7 @@ bot.on('guildMemberAdd', member =>{
 })
 
 async function unban(msg){
-    if(msg.member.roles.find("name","👑Owner") || msg.member.roles.find("name","🛠Moderator")){
+    if(msg.member.roles.has(567689357410959361) || msg.member.roles.has(567737708366004234)){
         
         let args = msg.content.substring(prefix.length).split(" ");
 
@@ -186,7 +186,7 @@ async function unban(msg){
 }
 
 async function warn(msg){
-    if(msg.member.roles.find("name","👑Owner") || msg.member.roles.find("name","🛠Moderator")){
+    if(msg.member.roles.has(567689357410959361) || msg.member.roles.has(567737708366004234)){
         let args = msg.content.substring(prefix.length).split(" ");
         if(!args[1]) return msg.channel.send('```Specify a person kid```')
         let wUser = msg.guild.member(msg.mentions.users.first() || msg.guild.members.get(args[0]));
@@ -227,7 +227,7 @@ async function warn(msg){
 }
 
 async function unwarn(msg){
-    if(msg.member.roles.find("name","👑Owner") || msg.member.roles.find("name","🛠Moderator")){
+    if(msg.member.roles.has(567689357410959361) || msg.member.roles.has(567737708366004234)){
         let args = msg.content.substring(prefix.length).split(" ");
         if(!args[1]) return msg.channel.send('```Specify a person kid```')
         let wUser = msg.guild.member(msg.mentions.users.first() || msg.guild.members.get(args[0]));
