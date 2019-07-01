@@ -15,8 +15,8 @@ bot.on('message', msg => {
     if (msg.channel.type === 'dm') return;
 else{let args = msg.content.substring(prefix.length).split(" ");
     switch(args[0]){
-        case 'ping':
-            msg.channel.send('```PONG!!```');
+        case 'announce':
+            announce(msg)
         break;
 
         case 'kick':
@@ -125,7 +125,7 @@ else{let args = msg.content.substring(prefix.length).split(" ");
             .addField("INFO",`I am <@581010429002776578>.\nI can help you while you enjoy your stay at TheGamingFam.\nI am created and owned by <@457207642335477761>`)
             .addField("COMMANDS",'These are only for the Owner and Moderators.\n`.kick`|`.ban`|`.unban`|`.mute`|`.unmute`|`.purge`')
             .addField("MUSIC",'`.play`|`.search`|`.skip`|`.stop`|`.leave`')
-            .addField("FUN",'More commands to be added\n`.ping`')
+            .addField("FUN",'Commands to be added')
             .addField(`Have fun using my services,`, `${msg.author}`)
             msg.channel.send(helpEmbed)
         break;
@@ -249,3 +249,16 @@ async function unwarn(msg){
     }   
     else{msg.channel.send('```You aint got perms kid```')}
 }
+
+async function announce(msg){
+    const filter = m => m.content.isNaN
+    const collector = msg.channel.createMessageCollector(filter, { time: 60000 });
+    
+    let announceEmbed = new Discord.RichEmbed
+    .setTitle(`**ANNOUNCEMENT**`)
+    .setDescription(collector)
+    
+    msg.guild.channels.find("name","announcements").send(announceEmbed)
+}    
+    
+    
