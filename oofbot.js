@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const token = 'NTgxMDEwNDI5MDAyNzc2NTc4.XOZXzg.LQJuzha9NngU_1IieNUxEGKpejs';
+const token = 'TOKEN_HERE';
 const oof = '```Stop oofing,kid```'
 const smh = '```Kid wanna get kicked? No smh```'
 bot.on('ready', () =>{
