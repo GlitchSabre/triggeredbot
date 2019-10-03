@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const prefix = '.';
-const token = 'NTgxMDEwNDI5MDAyNzc2NTc4.XOZXzg.LQJuzha9NngU_1IieNUxEGKpejs';
+const token = 'TOKEN_HERE';
 const fs = require("fs")
 const replaceExt = require('replace-ext');
 //let warns = JSON.parse(fs.readFileSync("./warns.json","utf8"))
