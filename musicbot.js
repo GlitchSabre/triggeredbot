@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const prefix = '.';
-const token = 'NTgxMDEwNDI5MDAyNzc2NTc4.XOZXzg.LQJuzha9NngU_1IieNUxEGKpejs';
+const token = 'TOKEN_HERE';
 const ytdl = require('ytdl-core');
 //const YouTube = require("discord-youtube-api");
  
